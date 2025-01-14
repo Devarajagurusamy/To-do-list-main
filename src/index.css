@@ -5,179 +5,178 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 body {
   min-height: 100vh;
-  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f8fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   width: 100%;
-  max-width: 500px;
-  border: 1px solid mediumblue;
-  margin: auto;
+  max-width: 450px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.02);
 }
 
 header {
   width: 100%;
-  padding: 0 0.25rem;
-  background-color: mediumblue;
-  color: aliceblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 1.5rem;
+  background-color: #7d4bff;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
 }
 
 main {
-  width: 100%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
+  gap: 1rem;
 }
 
 footer {
-  width: 100%;
-  padding: 0.25rem;
-  background-color: mediumblue;
-  color: aliceblue;
-  display: grid;
-  place-content: center;
+  background-color: #7d4bff;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  border-top: 2px solid #fff;
 }
 
 ul {
-  width: 100%;
   list-style: none;
-  padding: 0 0.25rem 0.25rem;
+  padding: 0;
 }
 
-ul li::before {
-  content: "\200B";
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #f0f1f6;
 }
 
 .item {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-  margin: 0.25rem 0;
-  background-color: #eee;
-}
-
-.item:first-child {
-  margin: 0;
+  width: 100%;
 }
 
 .item input[type="checkbox"] {
-  text-align: center;
-  width: 2.5rem;
-  width: 48px;
-  min-width: 48px;
-  height: 2.5rem;
-  height: 48px;
-  min-height: 48px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 2px solid #7d4bff;
+  transition: background-color 0.3s ease;
 }
 
-.item input[type="checkbox"]:focus + label {
-  text-decoration: underline;
+.item input[type="checkbox"]:checked {
+  background-color: #7d4bff;
+  border-color: #7d4bff;
 }
 
 .item > label {
-  font-size: 0.75rem;
   flex-grow: 1;
+  font-size: 1rem;
+  color: #333;
 }
 
 .item svg {
-  width: 48px;
-  min-width: 48px;
-  height: 36px;
-  font-size: 1rem;
-  color: steelblue;
+  width: 24px;
+  height: 24px;
+  color: #ff4b6a;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.item svg:focus,
 .item svg:hover {
-  color: red;
-  outline: none;
+  color: #e91e63;
 }
 
 .addForm {
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  margin: 0.5rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.addForm label {
-  position: absolute;
-  left: -99999px;
-}
-
-.addForm input[type='text'] {
+.addForm input[type="text"] {
   flex-grow: 1;
-  max-width: calc(100% - 50px);
-  min-height: 48px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  margin-right: 0.25rem;
   outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.addForm input[type="text"]:focus {
+  border-color: #7d4bff;
 }
 
 button {
-  height: 48px;
-  min-width: 48px;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: aliceblue;
-  color: mediumblue;
+  width: 50px;
+  height: 50px;
+  background-color: #7d4bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:focus, 
-button:hover {
-  color: white;
-  background-color: limegreen;
-  outline: none;
+button:hover,
+button:focus {
+  background-color: #5e3bbf;
+  transform: scale(1.1);
 }
 
 .searchForm {
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  margin: 0.25rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.searchForm label {
-  position: absolute;
-  left: -99999px;
-}
-
-.searchForm input[type='text'] {
+.searchForm input[type="text"] {
   flex-grow: 1;
-  max-width: 100%;
-  min-height: 48px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
   outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.searchForm input[type="text"]:focus {
+  border-color: #7d4bff;
 }
